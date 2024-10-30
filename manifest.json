@@ -44,7 +44,7 @@
       "description": "Command 1 with an argument."
     },
     "rewards": {
-      "description": "Rewards to get calculate for contributors."
+      "description": "Calculate rewards for contributors."
     }
   },
   "configuration": {

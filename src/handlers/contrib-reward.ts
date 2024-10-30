@@ -1,6 +1,6 @@
 import { Context } from "../types";
 
-export async function contribReward(context: Context) {
+export async function contributorReward(context: Context) {
   const {
     logger,
     payload,
@@ -13,12 +13,6 @@ export async function contribReward(context: Context) {
   const repo = payload.repository.name;
   const issueNumber = payload.issue.number;
   const owner = payload.repository.owner.login;
-  const body = payload.comment.body;
-
-  if (!body.match(/rewards/i)) {
-    logger.error(`Invalid use of slash command, use "/rewards".`, { body });
-    return;
-  }
 
   logger.info("Calculating rewards for contributor.");
   logger.debug(`Executing contribReward:`, { sender, repo, issueNumber, owner });
